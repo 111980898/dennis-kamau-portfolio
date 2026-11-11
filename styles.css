@@ -74,3 +74,33 @@ img{max-width:100%;height:auto}
 @keyframes ascii-drift{from{transform:translateX(-12%)}to{transform:translateX(4%)}}
 @media(max-width:760px){.featured-project-top,.project-video{display:block}.featured-actions{justify-content:flex-start;margin-top:26px}.featured-actions .button{width:auto}.project-proof{grid-template-columns:1fr}.project-video video{margin-top:24px}.project-proof figcaption{display:block}.project-proof figcaption span{display:block;margin-top:5px}}
 @media(prefers-reduced-motion:reduce){.ascii-signal span{animation:none}.project-proof img{transition:none}}
+
+/* --- second-pass portfolio refinement --- */
+.hero{align-items:center}
+.hero-grid.single.centered{transform:translateY(6vh)}
+.hero-bg img{object-position:center 42%;filter:saturate(.88) brightness(.72)}
+.hero-bg:after{background:radial-gradient(ellipse at 50% 44%,rgba(11,12,22,.2) 0%,rgba(11,12,22,.5) 48%,rgba(11,12,22,.84) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 22%)}
+.hero-name{opacity:.9;text-shadow:0 6px 34px rgba(0,0,0,.58)}
+.hero-role-line,.hero-sub,.hero-meta{opacity:.94}
+.focus{overflow:hidden;isolation:isolate;background:#0d101b}
+.focus>*:not(.satin-ridges){position:relative;z-index:1}
+.satin-ridges{position:absolute;inset:-15% -8%;z-index:0;opacity:.42;pointer-events:none;transform:rotate(-5deg) scale(1.08);filter:saturate(.82)}
+.satin-ridges:before,.satin-ridges:after,.satin-ridges span{content:"";position:absolute;inset:0;background:repeating-linear-gradient(104deg,rgba(201,166,104,.03) 0 8px,rgba(121,220,255,.12) 12px 19px,rgba(255,255,255,.02) 25px 34px,rgba(92,36,48,.18) 43px 67px);mix-blend-mode:screen}
+.satin-ridges:before{filter:blur(18px);transform:translateX(-4%) skewX(-12deg);animation:satin-flow 18s ease-in-out infinite alternate}
+.satin-ridges:after{opacity:.55;filter:blur(3px);transform:translateX(5%) skewX(7deg);animation:satin-flow-reverse 22s ease-in-out infinite alternate}
+.satin-ridges span{opacity:.26;filter:blur(34px);transform:translateX(1%) scaleY(1.15);animation:satin-glow 12s ease-in-out infinite alternate}
+@keyframes satin-flow{from{transform:translateX(-6%) skewX(-12deg)}to{transform:translateX(8%) skewX(-4deg)}}
+@keyframes satin-flow-reverse{from{transform:translateX(7%) skewX(8deg)}to{transform:translateX(-5%) skewX(2deg)}}
+@keyframes satin-glow{from{opacity:.16;transform:translateX(-2%) scaleY(1.05)}to{opacity:.34;transform:translateX(5%) scaleY(1.2)}}
+.github-signal{position:absolute;inset:-24px 0 auto;z-index:-1;overflow:hidden;height:110px;display:flex;flex-direction:column;gap:4px;color:#79dcff;font:500 clamp(22px,4vw,58px)/.95 var(--mono);letter-spacing:.08em;white-space:nowrap;opacity:.1;pointer-events:none;transform:rotate(-3deg)}
+.github-signal span{animation:github-drift 20s linear infinite}
+.github-signal span:nth-child(2){animation-duration:27s;animation-direction:reverse;color:#a4eec4}
+@keyframes github-drift{from{transform:translateX(-18%)}to{transform:translateX(8%)}}
+.project-proof figure a{display:block;color:inherit;text-decoration:none;cursor:zoom-in}
+.project-proof figure a:focus-visible{outline:2px solid #a4eec4;outline-offset:4px}
+.project-proof img{aspect-ratio:auto;height:auto;min-height:0;object-fit:contain;object-position:top center;transform-origin:center}
+.project-proof figcaption{background:#0c1513;align-items:center}
+.project-proof figcaption b{transition:color .25s}
+.project-proof figure:hover figcaption b{color:#79dcff}
+@media(max-width:760px){.hero-grid.single.centered{transform:translateY(3vh)}.github-signal{top:-12px}.satin-ridges{inset:-10% -25%;opacity:.32}}
+@media(prefers-reduced-motion:reduce){.satin-ridges:before,.satin-ridges:after,.satin-ridges span,.github-signal span{animation:none}}
