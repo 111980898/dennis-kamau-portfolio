@@ -104,3 +104,14 @@ img{max-width:100%;height:auto}
 .project-proof figure:hover figcaption b{color:#79dcff}
 @media(max-width:760px){.hero-grid.single.centered{transform:translateY(3vh)}.github-signal{top:-12px}.satin-ridges{inset:-10% -25%;opacity:.32}}
 @media(prefers-reduced-motion:reduce){.satin-ridges:before,.satin-ridges:after,.satin-ridges span,.github-signal span{animation:none}}
+
+/* --- landing polish: photo transparency + smoother motion --- */
+.hero-bg img{opacity:.84;will-change:transform,opacity;animation:hero-photo-drift 28s ease-in-out infinite alternate}
+.hero-bg:after{background:radial-gradient(ellipse at 50% 44%,rgba(11,12,22,.22) 0%,rgba(11,12,22,.48) 48%,rgba(11,12,22,.82) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 22%)}
+.satin-ridges:before{animation:satin-flow 28s cubic-bezier(.37,0,.2,1) infinite alternate}
+.satin-ridges:after{animation:satin-flow-reverse 34s cubic-bezier(.37,0,.2,1) infinite alternate}
+.satin-ridges span{animation:satin-glow 22s cubic-bezier(.37,0,.2,1) infinite alternate}
+.github-signal span{animation:github-drift 32s linear infinite}
+.github-signal span:nth-child(2){animation-duration:40s}
+@keyframes hero-photo-drift{from{transform:scale(1.01) translate3d(0,0,0)}to{transform:scale(1.045) translate3d(0,-.6%,0)}}
+@media(prefers-reduced-motion:reduce){.hero-bg img{animation:none}}
