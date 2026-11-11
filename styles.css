@@ -149,3 +149,21 @@ img{max-width:100%;height:auto}
   .github-signal{opacity:.11}
 }
 @media(prefers-reduced-motion:reduce){.hero-copy{animation:none}}
+
+/* --- final identity and animation pass --- */
+.hero-grid.single.centered .hero-name{white-space:nowrap;width:100%;font-size:clamp(34px,8.7vw,108px);letter-spacing:-.045em}
+.hero-role-line{display:flex;align-items:center;justify-content:center;gap:clamp(7px,1.2vw,16px);flex-wrap:wrap}
+.hero-role-line span{color:#d7d9ff;background:linear-gradient(90deg,#f4d98b 0%,#c9a668 26%,#9c8cff 61%,#67c7ff 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 0 20px rgba(139,124,255,.18)}
+.hero-role-line i{font-style:normal;color:#a98cff;text-shadow:0 0 12px rgba(126,115,255,.7)}
+.capabilities{overflow:hidden;isolation:isolate}
+.capabilities>*:not(.execution-ridges){position:relative;z-index:1}
+.execution-ridges{inset:-18% -10%;opacity:.32;transform:rotate(7deg) scale(1.15);filter:hue-rotate(34deg) saturate(1.25)}
+.execution-ridges:before{animation:satin-flow 24s cubic-bezier(.37,0,.2,1) infinite alternate-reverse}
+.execution-ridges:after{animation:satin-flow-reverse 31s cubic-bezier(.37,0,.2,1) infinite alternate-reverse}
+.execution-ridges span{animation:satin-glow 19s cubic-bezier(.37,0,.2,1) infinite alternate-reverse}
+.social-mark{display:inline-grid;place-items:center;width:25px;height:25px;border:1px solid currentColor;border-radius:50%;font:600 11px/1 var(--mono);letter-spacing:0;text-transform:none}
+.social-name{display:inline-flex;align-items:center;gap:10px}
+.mobile-socials a:hover .social-mark,.social-grid a:hover .social-mark{background:var(--accent);border-color:var(--accent);color:#0b0c16}
+.social-grid a{align-items:center}
+@media(max-width:900px){.hero-grid.single.centered .hero-name{font-size:clamp(34px,11.8vw,78px)}.hero-role-line{gap:5px;font-size:10px}}
+@media(max-width:560px){.hero-grid.single.centered .hero-name{font-size:clamp(33px,11.5vw,60px);letter-spacing:-.055em}.hero-role-line{max-width:340px;line-height:1.6}.execution-ridges{opacity:.25}}
