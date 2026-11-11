@@ -48,3 +48,29 @@ img{max-width:100%;height:auto}
 .button.download-active{border-color:var(--accent);color:var(--accent)}
 .button.download-done{border-color:#7bdc8f;color:#7bdc8f}
 @media(max-width:560px){.cv-modal-bar{flex-wrap:wrap}.cv-modal-bar>div{width:100%;justify-content:space-between}.cv-modal-bar .button.small{flex:1 1 auto}}
+
+/* --- featured Huduma Link case study --- */
+.featured-project{position:relative;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,rgba(12,35,30,.94),rgba(13,14,24,.94));padding:clamp(24px,4vw,52px);isolation:isolate}
+.featured-project-top{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+.featured-project-top h3{font-size:clamp(42px,7vw,84px);line-height:.96;letter-spacing:-.06em;margin:12px 0 18px;color:#f3f8f1}
+.featured-lede{max-width:720px;color:#b2c8bd;font-size:18px;margin:0;line-height:1.7}
+.featured-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.project-tags{position:relative;z-index:1;display:flex;gap:8px;flex-wrap:wrap;margin:38px 0;border-top:1px solid rgba(164,238,196,.2);border-bottom:1px solid rgba(164,238,196,.2);padding:15px 0}
+.project-tags span{font:500 9px var(--mono);letter-spacing:.12em;color:#a4eec4;border:1px solid rgba(164,238,196,.24);padding:8px 10px}
+.project-proof{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.project-proof figure{margin:0;border:1px solid rgba(255,255,255,.12);background:#0c1513;overflow:hidden}
+.project-proof img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top center;filter:saturate(.88);transition:filter .35s,transform .5s}
+.project-proof figure:hover img{filter:saturate(1);transform:scale(1.02)}
+.project-proof figcaption{display:flex;justify-content:space-between;gap:18px;padding:13px 15px;color:#9eb5a8;font:500 10px/1.5 var(--mono);letter-spacing:.04em}
+.project-proof figcaption b{color:#a4eec4;white-space:nowrap;font-weight:500}
+.project-video{position:relative;z-index:1;display:grid;grid-template-columns:.75fr 1.25fr;align-items:center;gap:34px;margin-top:16px;padding-top:28px;border-top:1px solid rgba(164,238,196,.2)}
+.video-heading h4{font-size:28px;line-height:1.1;margin:11px 0;color:#f3f8f1;letter-spacing:-.03em}
+.video-heading p{color:#9eb5a8;margin:0}
+.project-video video{display:block;width:100%;border:1px solid rgba(255,255,255,.16);background:#071c16;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.ascii-signal{position:absolute;z-index:-1;inset:0;display:flex;flex-direction:column;justify-content:center;gap:8px;overflow:hidden;opacity:.12;color:#79dcff;font:500 clamp(18px,3vw,42px)/1.1 var(--mono);white-space:nowrap;transform:rotate(-8deg) scale(1.2);pointer-events:none}
+.ascii-signal span{animation:ascii-drift 18s linear infinite}
+.ascii-signal span:nth-child(2){animation-duration:22s;animation-direction:reverse;color:#a4eec4}
+.ascii-signal span:nth-child(3){animation-duration:26s}
+@keyframes ascii-drift{from{transform:translateX(-12%)}to{transform:translateX(4%)}}
+@media(max-width:760px){.featured-project-top,.project-video{display:block}.featured-actions{justify-content:flex-start;margin-top:26px}.featured-actions .button{width:auto}.project-proof{grid-template-columns:1fr}.project-video video{margin-top:24px}.project-proof figcaption{display:block}.project-proof figcaption span{display:block;margin-top:5px}}
+@media(prefers-reduced-motion:reduce){.ascii-signal span{animation:none}.project-proof img{transition:none}}
