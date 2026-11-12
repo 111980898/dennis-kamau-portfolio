@@ -203,3 +203,23 @@ img{max-width:100%;height:auto}
   .hero-bg img{backface-visibility:hidden}
   .satin-ridges:before,.satin-ridges:after,.satin-ridges span{will-change:transform;filter:blur(7px)}
 }
+
+/* --- role expansion, availability signal, and social colour --- */
+.hero-role-line span:nth-of-type(2){color:#8be9fd;-webkit-text-fill-color:#8be9fd;border-color:rgba(139,233,253,.58)}
+.hero-role-line span:nth-of-type(3){color:#8be9fd;-webkit-text-fill-color:#8be9fd;border-color:rgba(139,233,253,.58)}
+.hero-role-line span:nth-of-type(4){color:#ddd6fe;-webkit-text-fill-color:#ddd6fe;border-color:rgba(221,214,254,.58)}
+.availability{color:#b7f7d8!important;background:linear-gradient(100deg,#86efac 0%,#b7f7d8 18%,#f5d58a 42%,#c4b5fd 65%,#86efac 84%,#b7f7d8 100%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:availability-wave 4.8s ease-in-out infinite;text-shadow:0 0 14px rgba(134,239,172,.18)}
+.availability i{background:#86efac;box-shadow:0 0 10px #86efac;animation:availability-dot 2.2s ease-in-out infinite}
+@keyframes availability-wave{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes availability-dot{0%,100%{transform:scale(1);background:#86efac;box-shadow:0 0 8px #86efac}50%{transform:scale(1.25);background:#f5d58a;box-shadow:0 0 14px #c4b5fd}}
+.mobile-socials a:nth-child(1),.social-grid a:nth-child(1){color:#70b7ff}
+.mobile-socials a:nth-child(2),.social-grid a:nth-child(2){color:#f472b6}
+.mobile-socials a:nth-child(3),.social-grid a:nth-child(3){color:#e5e7eb}
+.mobile-socials a:nth-child(4),.social-grid a:nth-child(4){color:#c4b5fd}
+.mobile-socials a:hover,.social-grid a:hover{color:var(--text)}
+.mobile-socials a:hover:nth-child(1) .social-mark,.social-grid a:hover:nth-child(1) .social-mark{background:#0a66c2;border-color:#70b7ff;color:white}
+.mobile-socials a:hover:nth-child(2) .social-mark,.social-grid a:hover:nth-child(2) .social-mark{background:#e1306c;border-color:#f472b6;color:white}
+.mobile-socials a:hover:nth-child(3) .social-mark,.social-grid a:hover:nth-child(3) .social-mark{background:#111;border-color:#e5e7eb;color:white}
+.mobile-socials a:hover:nth-child(4) .social-mark,.social-grid a:hover:nth-child(4) .social-mark{background:#6e40c9;border-color:#c4b5fd;color:white}
+@media(max-width:560px){.hero-role-line span{font-size:7.5px;padding:6px 7px}.availability{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.availability,.availability i{animation:none}.availability{-webkit-text-fill-color:#b7f7d8;background:none}}
