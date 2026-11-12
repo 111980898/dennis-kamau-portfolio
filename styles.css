@@ -187,3 +187,19 @@ img{max-width:100%;height:auto}
   .github-signal span{animation-duration:44s!important}
   .hero-bg img{animation-duration:36s}
 }
+
+/* --- mobile loading and paint-budget optimisation --- */
+.hero-bg picture,.about-photo picture,.project-proof picture{display:block;width:100%;height:100%}
+@supports (content-visibility:auto){
+  main>section:not(.hero){content-visibility:auto;contain-intrinsic-size:900px}
+}
+@media(max-width:900px){
+  .noise{opacity:.018}
+  .site-header{backdrop-filter:blur(8px)}
+  .satin-ridges,.github-signal{contain:strict}
+}
+@media(max-width:560px){
+  .hero-bg picture{height:100%}
+  .hero-bg img{backface-visibility:hidden}
+  .satin-ridges:before,.satin-ridges:after,.satin-ridges span{will-change:transform;filter:blur(7px)}
+}
