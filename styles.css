@@ -241,3 +241,15 @@ img{max-width:100%;height:auto}
 @keyframes x-wave{0%,100%{color:#e5e7eb}50%{color:#8be9fd}}
 @keyframes github-wave{0%,100%{color:#c4b5fd}50%{color:#b7f7d8}}
 @media(prefers-reduced-motion:reduce){.location,.scroll-note,.scroll-note span,.social-grid a .social-name,.social-grid a b,.mobile-socials a .social-mark{animation:none}.location{-webkit-text-fill-color:#8be9fd;background:none}.scroll-note{-webkit-text-fill-color:#b7f7d8;background:none}}
+
+/* --- project filtering controls --- */
+.project-filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin:4px 0 10px}
+.project-filter{appearance:none;border:1px solid var(--line2);background:transparent;color:#858895;padding:10px 13px;cursor:pointer;font:500 10px var(--mono);letter-spacing:.1em;transition:color .25s,border-color .25s,background .25s,transform .25s}
+.project-filter span{color:var(--accent);margin-left:5px}
+.project-filter:hover,.project-filter:focus-visible{color:var(--text);border-color:var(--accent);outline:none;transform:translateY(-1px)}
+.project-filter.active{background:var(--accent);border-color:var(--accent);color:#071019}
+.project-filter.active span{color:#071019}
+.project-filter-status{min-height:18px;margin:0 0 18px;color:#707382;font:500 9px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.featured-project[hidden]{display:none}
+@media(max-width:560px){.project-filters{gap:6px}.project-filter{flex:1 1 auto;padding:9px 8px;font-size:8px}.project-filter-status{margin-bottom:14px}}
+@media(prefers-reduced-motion:reduce){.project-filter{transition:none}}

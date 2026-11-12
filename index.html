@@ -127,7 +127,15 @@
     <section id="projects" class="section projects" data-section>
       <div class="section-head reveal"><span>[ 04_PROJECTS ]</span><h2>Work that will<br><em>speak for itself.</em></h2></div>
       <div class="project-intro reveal"><div class="github-signal" aria-hidden="true"><span>GITHUB / 111980898</span><span>CONNECTED / BUILD / SHIP / IMPROVE</span></div><p>This section is connected to my GitHub. Each featured build pairs a live product with the problem it solves, the decisions behind it, and the result a user can experience.</p><a class="github-pill" href="https://github.com/111980898" target="_blank" rel="noopener">GITHUB / 111980898 ↗</a></div>
-      <article class="featured-project reveal">
+      <div class="project-filters reveal" role="group" aria-label="Filter projects">
+        <button class="project-filter active" type="button" data-filter="all" aria-pressed="true">ALL <span>01</span></button>
+        <button class="project-filter" type="button" data-filter="civic" aria-pressed="false">CIVIC TECH</button>
+        <button class="project-filter" type="button" data-filter="web" aria-pressed="false">WEB PRODUCTS</button>
+        <button class="project-filter" type="button" data-filter="interface" aria-pressed="false">INTERFACE</button>
+        <button class="project-filter" type="button" data-filter="security" aria-pressed="false">SECURITY</button>
+      </div>
+      <p class="project-filter-status" data-filter-status aria-live="polite">Showing 1 project</p>
+      <article class="featured-project reveal" data-project-card data-categories="civic web interface security">
         <div class="ascii-signal" aria-hidden="true"><span> .  =+xX0S8#@  .  +xX0S8#@  .  =+xX0S8#@  </span><span> +xX0S8#@  .  =+xX0S8#@  .  +xX0S8#@  </span><span>  =+xX0S8#@  .  +xX0S8#@  .  =+xX0S8#@ </span></div>
         <div class="featured-project-top"><div><span class="project-index">PROJECT_001 / CASE STUDY</span><h3>Huduma Link</h3><p class="featured-lede">A mini eCitizen-style civic service portal for Murang'a County — helping residents report issues, follow progress, and see the next action clearly.</p></div><div class="featured-actions"><a class="button button-primary small" href="https://huduma-link-nine.vercel.app" target="_blank" rel="noopener">OPEN LIVE SITE <span>↗</span></a><a class="button button-ghost small" href="https://github.com/111980898/HudumaLink" target="_blank" rel="noopener">VIEW SOURCE <span>↗</span></a></div></div>
         <div class="project-tags"><span>FLASK</span><span>NEON POSTGRESQL</span><span>VERCEL</span><span>CITIZEN + ADMIN</span><span>SECURITY-FIRST</span></div>
