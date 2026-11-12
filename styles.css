@@ -223,3 +223,21 @@ img{max-width:100%;height:auto}
 .mobile-socials a:hover:nth-child(4) .social-mark,.social-grid a:hover:nth-child(4) .social-mark{background:#6e40c9;border-color:#c4b5fd;color:white}
 @media(max-width:560px){.hero-role-line span{font-size:7.5px;padding:6px 7px}.availability{font-size:8px}}
 @media(prefers-reduced-motion:reduce){.availability,.availability i{animation:none}.availability{-webkit-text-fill-color:#b7f7d8;background:none}}
+
+/* --- metadata and social finish --- */
+.location{white-space:nowrap;color:#8be9fd;background:linear-gradient(100deg,#86efac 0%,#8be9fd 28%,#c4b5fd 55%,#f5d58a 78%,#86efac 100%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:location-wave 5.6s ease-in-out infinite;text-shadow:0 0 13px rgba(139,233,253,.16)}
+@keyframes location-wave{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.scroll-note{color:transparent;background:linear-gradient(90deg,#86efac,#8be9fd,#c4b5fd,#f5d58a,#86efac);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;animation:rainbow-scroll 4.5s ease-in-out infinite}
+.scroll-note span{display:inline-block;color:#8be9fd;-webkit-text-fill-color:#8be9fd;text-shadow:0 0 12px rgba(139,233,253,.85);animation:scroll-arrow 1.8s ease-in-out infinite}
+@keyframes rainbow-scroll{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes scroll-arrow{0%,100%{transform:translateY(0);color:#8be9fd}50%{transform:translateY(5px);color:#c4b5fd}}
+.social-mark svg{display:block;width:15px;height:15px}
+.social-grid a:nth-child(1) .social-name,.social-grid a:nth-child(1) b,.mobile-socials a:nth-child(1) .social-mark{animation:linkedin-wave 3.8s ease-in-out infinite}
+.social-grid a:nth-child(2) .social-name,.social-grid a:nth-child(2) b,.mobile-socials a:nth-child(2) .social-mark{animation:instagram-wave 4.2s ease-in-out infinite}
+.social-grid a:nth-child(3) .social-name,.social-grid a:nth-child(3) b,.mobile-socials a:nth-child(3) .social-mark{animation:x-wave 4.6s ease-in-out infinite}
+.social-grid a:nth-child(4) .social-name,.social-grid a:nth-child(4) b,.mobile-socials a:nth-child(4) .social-mark{animation:github-wave 4s ease-in-out infinite}
+@keyframes linkedin-wave{0%,100%{color:#70b7ff}50%{color:#b7f7d8}}
+@keyframes instagram-wave{0%,100%{color:#f472b6}50%{color:#f5d58a}}
+@keyframes x-wave{0%,100%{color:#e5e7eb}50%{color:#8be9fd}}
+@keyframes github-wave{0%,100%{color:#c4b5fd}50%{color:#b7f7d8}}
+@media(prefers-reduced-motion:reduce){.location,.scroll-note,.scroll-note span,.social-grid a .social-name,.social-grid a b,.mobile-socials a .social-mark{animation:none}.location{-webkit-text-fill-color:#8be9fd;background:none}.scroll-note{-webkit-text-fill-color:#b7f7d8;background:none}}
